@@ -1,0 +1,37 @@
+sasas
+dsfssf
+first senario..
+
+1) no data in table and no data in onenote but course already added.    
+2) no data in table, but data there in onenote
+3) Data there in onenote and table and a new course is added
+
+4) unenrol a course, the section has to be removed from onenote and calendar id too.
+
+
+Secaniro for calendar
+
+1) No data in table and no data in calendar but course already enrolled.
+2) No data in tale but data there in calendar.
+3) Data there in calendar and table and a new course is added
+4) unenrol a course, the section has to be removed from onenote and calendar id too.\
+
+
+Getting posted to the specific calendar. But here tthe course event in the calendar getting adding again and again. But general events are fine.
+
+calendar get events was not giving course based events
+calendar events getting repeated.
+
+Yammmer
+
+O365 email
+
+
+AAMkAGVlMjQ0ZWE5LWYzNDItNDE5My1hMDQ0LTJjOWYwZjljYWE5ZQBGAAAAAABIJAb9z4g1SJHlIBx4imFrBwApvKabz41wTq8ePJNCQgD6AAAXTytPAAApvKabz41wTq8ePJNCQgD6AAAZjR3IAAA=
+
+AAMkAGVlMjQ0ZWE5LWYzNDItNDE5My1hMDQ0LTJjOWYwZjljYWE5ZQBGAAAAAABIJAb9z4g1SJHlIBx4imFrBwApvKabz41wTq8ePJNCQgD6AAAXTytPAAApvKabz41wTq8ePJNCQgD6AAAZjR3IAAA=
+
+AAMkAGVlMjQ0ZWE5LWYzNDItNDE5My1hMDQ0LTJjOWYwZjljYWE5ZQBGAAAAAABIJAb9z4g1SJHlIBx4imFrBwApvKabz41wTq8ePJNCQgD6AAAXTytPAAApvKabz41wTq8ePJNCQgD6AAAZjR3IAAA=
+
+
+
