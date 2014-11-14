@@ -1,0 +1,737 @@
+http://net.tutsplus.com/tutorials/php/codeigniter-from-scratch-day-3/  -- video tutorials
+
+http://ellislab.com/forums/viewthread/187641/
+http://www.youtube.com/watch?v=7NOSdPPwmdY
+http://net.tutsplus.com/tutorials/php/working-with-restful-services-in-codeigniter-2/
+http://www.bitrepository.com/php-how-to-add-multi-language-support-to-a-website.html
+
+https://github.com/benjamincurrie/CodeIgniter-Language-Switch
+
+http://maestric.com/doc/php/codeigniter_i18n
+
+http://sumonbd.wordpress.com/2009/09/16/develop-multilingual-site-using-codeigniter-i18n-library/
+
+https://github.com/EllisLab/CodeIgniter/wiki/CodeIgniter-2.1-internationalization-i18n
+
+http://glennstovall.com/blog/2012/02/28/setting-up-a-template-and-assets-in-codeigniter/
+
+http://devsnippets.com/article/getting-started-with-codeigniter-and-how-to-create-all-those-great-apps.html
+
+pagination http://phpmaster.com/pagination-with-codeigniter/
+
+
+$this -> db -> select('id, username, password');
+    $this -> db -> from('users');
+    $this -> db -> where ('username',$username);
+    $this -> db -> where ('password',MD5($password));
+    $this -> db -> limit(1);
+    
+    $query = $this -> db -> get(); 
+    if($query -> num_rows() == 1)
+	   {
+	     return $query->result();
+	   }
+	   else
+	   {
+	     return false;
+	   }
+	   
+	   
+	   <?php
+if ($this->user_model->isAdmin())
+{
+    $this->load->view('user_menu_admin');
+}
+elseif ($this->user_model->isModerator())
+{
+    $this->load->view('user_menu_moderator');
+}
+elseif ($this->user_model->isMember())
+{
+    $this->load->view('user_menu_member');
+}
+else
+{
+    $this->load->view('user_menu_guest');
+}
+
+
+http://www.commonfloor.com/listing/2bhk-apartment-for-sale-in-yeshwanthpur-bangalore-at-platinum-city/50cb0361f166e
+
+http://www.commonfloor.com/realestate/2-bhk-apartment-for-sale-in-platinum-city-yeshwanthpur-bangalore/a8b4a92e
+
+http://www.youtube.com/watch?v=gYI_MRTmyl4&feature=youtu.be
+http://www.youtube.com/watch?v=KOfxzTsilzc&feature=youtu.be
+http://www.youtube.com/watch?v=7iDo3IA6cWI&feature=youtu.be
+http://www.youtube.com/watch?v=8f5iqUUiH8I&feature=youtu.be
+
+
+
+
+Ashirwad Apartments
+Flat no 5
+3rd Floor
+Behind Hotel Garuda
+Opp to SBI Bank on Karve Road
+Karve Road
+
+
+
+bool Register(Username, password, package)
+
+--Step 1 inside PHP Lib -- Create JSON
+
+JSON - { "Username" : "test@test.com", "Password" : "p@ssw0rd000", "Package" : "Basic" }
+
+--Step 2 Encrypt JSON using AES and Shared Key
+
+--Step 3 Send Encrypted JSON in body using Curl
+
+--Step 4 Response -> Code - 200, 404, 501 etc.., Result - True/False, Message - "Error Message"
+
+--Step 5 Return the response from Register method
+Ram
+
+
+localhost:xxxx/VendorInterface/Register
+
+//$iv = mcrypt_create_iv(mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_ECB), MCRYPT_RAND);
+
+
+netcover.online
+
+http://youhack.me/2010/04/01/building-a-registration-system-with-email-verification-in-php/comment-page-3/
+
+
+
+/*
+$inpodscall = new InpodsServiceProxy();
+if(isset($_POST)) {
+	if($_POST['submit'] == 'Submit') {
+		$result = $inpodscall->register($_POST['firstname'], $_POST['lastname'], $_POST['email']);	
+		if($result){
+			echo $result;
+		}	
+	}
+	echo "<br>";
+	if($_POST['submit'] == 'Upgrade') {		
+		$result = $inpodscall->upgrade( $_POST['course'], $_POST['package']);
+		if($result){
+			echo $result;
+		}
+	}
+}*/
+
+
+///student
+
+<?php
+include('InpodsServiceProxy.php');
+/*ini_set(smtp_server, 'smtp.gmail.com');
+ini_set(smtp_port, '465');
+ini_set(auth_username,'gopika.krish@gmail.com');
+ini_alter(auth_password, '!@#Gopika123');*/
+?>
+<?php //include 'includes/top_header.php'; ?>
+<?php //include 'includes/header.php';?>
+
+        <!--menubar start-->
+<?php //include 'menu.php';?>
+        <!--menubar end-->
+        <!--inner_right start-->
+  
+  <?php 
+$ranno1 = rand(1,9);
+$ranno2 = rand(1,9);
+
+
+?>  
+  
+<?php
+print_r($_POST);
+if(isset($_POST['submit'])){
+	
+	$email = $_POST[email];
+		
+	//unique activation code	
+	 $activation = md5(uniqid(rand(), true));
+	 // Send the email:
+	   $message = " To activate your account, please click on this link:\n\n";
+	   $message .= 'http://vpindia.co.in/activate.php?email=' . urlencode($email) . "&key=$activation";
+	   echo $message;
+    //  mail($email, 'Registration Confirmation', $message, 'From:gops@inpods.com');
+	
+} else { ?>
+	
+	
+	
+
+<!--<script type="text/javascript" src="http://vpindia.co.injs/jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" src="http://vpindia.co.injs/jquery.validate.js"></script>-->
+
+
+
+
+<!--<script type="text/javascript">
+$(document).ready(function() 
+		{
+	$("#frmaddcontact").validate({
+		
+		rules : {  
+			firstname: { required:true},
+			lastname: { required:true },
+			dob: { required:true},
+			mobile: { required:true},
+			email:{ required:true,email:true}
+			
+			},
+		messages : {
+			 firstname: { required: "Please Enter First Name"},
+			 lastname: { required: "Please Enter Last Name"},
+			 dob: { required: "Please Enter Date Of Birth"},
+			 mobile: { required: "Please Enter Contact Number"},
+			 email : {required:"Please Enter Email Address"}	
+							
+			}	
+
+	});
+		});
+
+
+</script>-->
+
+        
+        <div id="inner_right_container">
+        
+        	<div id="inner_right_data_container">
+            
+            	<div id="inner_right_data_container_title">
+                	
+<p>Vishwakarma Publications is launching MT-CET 2013 online Exam portal on 25th March</p>
+                </div>
+<div id="inner_right_data">
+                <p>
+                
+<br />
+<span style="font-size:16px;font-weight:bold;">Register before 25th March and get a free access to one full test. You can take this exam anytime between 25th March & 15th May.</span>
+<br /> <p><span style="font-size:16px;font-weight:bold;">So hurry up and fill up the form below.</span><br /></p>
+</div>
+                <div id="inner_right_data">
+                <form method="post" action="" id="frmaddcontact" name="frmaddcontact">
+
+<div style="width: 700px;height:50px;">
+   
+<div style="color:#000000;  width:150px ; float:left;" class="column">* First Name</div>
+<div style="width:520px; float:right;" class="column">
+<input type="text" style="width:200px" id="firstname" name="firstname">
+    </div>
+  </div>
+ 
+ <div style="width: 700px;height:50px;">
+  
+    <div style="color:#000000;  width:150px; float:left;" class="column">* Last  Name</div>
+    <div style="width:520px; float:right;" class="column">
+      <input type="text" style="width:200px" id="lastname" name="lastname">
+    </div>
+ </div>
+  
+  <div style="width: 700px;height:50px;">
+  
+    <div style="color:#000000;  width:150px; float:left;" class="column">*Gender</div>
+    <div style="width:520px; float:right;" class="column">
+Male: <input type="radio"   name="gender" value="male" checked="checked">
+Female : <input type="radio"   name="gender" value="female">
+    </div>
+  </div>
+  <div style="width: 700px;height:50px;">
+  
+    <div style="color:#000000;  width:150px; float:left;" class="column">*DOB</div>
+    <div style="width:520px; float:right;" class="column">
+    
+<select name="DateOfBirth_Day">
+	<option> - Day - </option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	<option value="16">16</option>
+	<option value="17">17</option>
+	<option value="18">18</option>
+	<option value="19">19</option>
+	<option value="20">20</option>
+	<option value="21">21</option>
+	<option value="22">22</option>
+	<option value="23">23</option>
+	<option value="24">24</option>
+	<option value="25">25</option>
+	<option value="26">26</option>
+	<option value="27">27</option>
+	<option value="28">28</option>
+	<option value="29">29</option>
+	<option value="30">30</option>
+	<option value="31">31</option>
+</select>
+<select name="DateOfBirth_Month">
+	<option> - Month - </option>
+	<option value="January">January</option>
+	<option value="Febuary">Febuary</option>
+	<option value="March">March</option>
+	<option value="April">April</option>
+	<option value="May">May</option>
+	<option value="June">June</option>
+	<option value="July">July</option>
+	<option value="August">August</option>
+	<option value="September">September</option>
+	<option value="October">October</option>
+	<option value="November">November</option>
+	<option value="December">December</option>
+</select>
+
+<select name="DateOfBirth_Year">
+	<option> - Year - </option>
+	<option value="2004">2004</option>
+	<option value="2003">2003</option>
+	<option value="2002">2002</option>
+	<option value="2001">2001</option>
+	<option value="2000">2000</option>
+	<option value="1999">1999</option>
+	<option value="1998">1998</option>
+	<option value="1997">1997</option>
+	<option value="1996">1996</option>
+	<option value="1995">1995</option>
+	<option value="1994">1994</option>
+	<option value="1993">1993</option>
+	<option value="1992">1992</option>
+	<option value="1991">1991</option>
+	<option value="1990">1990</option>
+	<option value="1989">1989</option>
+	<option value="1988">1988</option>
+	<option value="1987">1987</option>
+	<option value="1986">1986</option>
+	<option value="1985">1985</option>
+	<option value="1984">1984</option>
+	<option value="1983">1983</option>
+	<option value="1982">1982</option>
+	<option value="1981">1981</option>
+	<option value="1980">1980</option>
+	<option value="1979">1979</option>
+	<option value="1978">1978</option>
+	<option value="1977">1977</option>
+	<option value="1976">1976</option>
+	<option value="1975">1975</option>
+	<option value="1974">1974</option>
+	<option value="1973">1973</option>
+	<option value="1972">1972</option>
+	<option value="1971">1971</option>
+	<option value="1970">1970</option>
+	<option value="1969">1969</option>
+	<option value="1968">1968</option>
+	<option value="1967">1967</option>
+	<option value="1966">1966</option>
+	<option value="1965">1965</option>
+	<option value="1964">1964</option>
+	<option value="1963">1963</option>
+	<option value="1962">1962</option>
+	<option value="1961">1961</option>
+	<option value="1960">1960</option>
+	<option value="1959">1959</option>
+	<option value="1958">1958</option>
+	<option value="1957">1957</option>
+	<option value="1956">1956</option>
+	<option value="1955">1955</option>
+	<option value="1954">1954</option>
+	<option value="1953">1953</option>
+	<option value="1952">1952</option>
+	<option value="1951">1951</option>
+	<option value="1950">1950</option>
+	<option value="1949">1949</option>
+	<option value="1948">1948</option>
+	<option value="1947">1947</option>
+	<option value="1946">1946</option>
+	<option value="1945">1945</option>
+	<option value="1944">1944</option>
+	<option value="1943">1943</option>
+	<option value="1942">1942</option>
+	<option value="1941">1941</option>
+	<option value="1940">1940</option>
+	<option value="1939">1939</option>
+	<option value="1938">1938</option>
+	<option value="1937">1937</option>
+	<option value="1936">1936</option>
+	<option value="1935">1935</option>
+	<option value="1934">1934</option>
+	<option value="1933">1933</option>
+	<option value="1932">1932</option>
+	<option value="1931">1931</option>
+	<option value="1930">1930</option>
+	<option value="1929">1929</option>
+	<option value="1928">1928</option>
+	<option value="1927">1927</option>
+	<option value="1926">1926</option>
+	<option value="1925">1925</option>
+	<option value="1924">1924</option>
+	<option value="1923">1923</option>
+	<option value="1922">1922</option>
+	<option value="1921">1921</option>
+	<option value="1920">1920</option>
+	<option value="1919">1919</option>
+	<option value="1918">1918</option>
+	<option value="1917">1917</option>
+	<option value="1916">1916</option>
+	<option value="1915">1915</option>
+	<option value="1914">1914</option>
+	<option value="1913">1913</option>
+	<option value="1912">1912</option>
+	<option value="1911">1911</option>
+	<option value="1910">1910</option>
+	<option value="1909">1909</option>
+	<option value="1908">1908</option>
+	<option value="1907">1907</option>
+	<option value="1906">1906</option>
+	<option value="1905">1905</option>
+	<option value="1904">1904</option>
+	<option value="1903">1903</option>
+	<option value="1902">1902</option>
+	<option value="1901">1901</option>
+	<option value="1900">1900</option>
+</select>
+
+    
+    
+     
+    </div>
+  </div>
+  <div style="width: 700px;height:80px;">
+  
+    <div style="color:#000000;  width:150px; float:left;" class="column">Address</div>
+    <div style="width:520px; float:right;" class="column">
+      <textarea rows="2" cols="22" name="address"></textarea>
+    </div>
+  </div>
+  <div style="width: 700px;height:50px;">
+  
+    <div style="color:#000000;  width:150px; float:left;" class="column">City</div>
+    <div style="width:520px; float:right;" class="column">
+      <input type="text" style="width:200px" id="city" name="city">
+    </div>
+  </div>
+   <div style="width: 700px;height:50px;">
+    <div style="color:#000000;  width:150px; float:left;" class="column">State</div>
+    <div style="width:520px; float:right;" class="column">
+    <input type="text" style="width:200px" id="state" name="state">
+    </div>
+  </div>
+  
+  
+  <div style="width: 700px;height:50px;">
+  
+    <div style="color:#000000;  width:150px; float:left;" class="column">Pin Code</div>
+    <div style="width:520px; float:right;" class="column">
+      <input type="text" style="width:200px" id="pincode" name="pincode">
+    </div>
+  </div>
+  <div style="width: 700px;height:50px;">
+  
+    <div style="color:#000000;  width:150px; float:left;" class="column">*Mobile</div>
+    <div style="width:520px; float:right;" class="column">
+      <input type="text" style="width:200px" id="mobile" name="mobile"> <br>
+      ex : 9812398123
+    </div>
+  </div>
+   <div style="width: 700px;height:50px;">
+  
+    <div style="color:#000000;  width:150px; float:left;" class="column">*Email</div>
+    <div style="width:520px; float:right;" class="column">
+      <input type="text" style="width:200px" id="email" name="email">
+    </div>
+  </div>
+  
+  <div style="width: 700px;height:50px;">
+  
+    <div style="color:#000000;  width:150px; float:left;" class="column">Enter The Addition</div>
+    <div style="width:520px; float:right;" class="column">
+    <label> <?php echo $ranno1; ?> </label> + <label> <?php echo $ranno2; ?> </label>
+     <input type="text" style="width:100px" id="addition" name="addition">
+    </div>
+  </div>
+    
+  <div style="width: 700px;height:50px;">
+    <div style="width:520px; align:center;" class="column">
+      <input type="submit" value="Submit" name="submit">
+    </div>
+  </div>
+  
+
+</form>
+                
+                </div>
+                
+            </div>
+        </div>
+        
+        <?php } ?>
+        <!--inner_right end-->
+     	<!--inner_left start-->
+        <?php //include 'inner_left.php';?>
+        <!--inner_left end-->
+<?php //include 'includes/footer.php';?>
+
+
+
+// Send the email:
+                $message = " To activate your account, please click on this link:\n\n";
+                $message .= $url  . '/activate.php?email=' . urlencode($email) . "&key=$activation";
+				$mail = new PHPMailer(); // defaults to using php "mail()"
+				$body = eregi_replace("[\]",'',$message);			
+				$mail->SetFrom("gops@inpods.com","Gop");
+				$address = "gops@inpods.com";
+				
+				//$EmailTo= 'mohitdhaigude@gmail.com';	
+				$EmailTo= 'gopika.krish@gmail.com';
+				$mail->AddAddress($EmailTo, "VPIndia Administrator");						
+				$mail->Subject    = "Enquiry Vishwakarma Publications";			
+				$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test			
+				$mail->MsgHTML($body);
+						
+				if(!$mail->Send()) 
+				{
+						echo "Mailer Error: " . $mail->ErrorInfo;
+							
+				} else {
+							echo "Mail has been sent successfully.";
+				}
+				
+				
+				
+				
+				
+                $mail = new PHPMailer(); // defaults to using php "mail()"
+				$body = eregi_replace("[\]",'',$message);			
+				$mail->SetFrom("gops@inpods.com","Gop");
+				$address = "gops@inpods.com";
+				
+				//$EmailTo= 'mohitdhaigude@gmail.com';	
+				$EmailTo= 'gopika.krish@gmail.com';
+				$mail->AddAddress($EmailTo, "VPIndia Administrator");						
+				$mail->Subject    = "Enquiry Vishwakarma Publications";			
+				$mail->AltBody    = "To view the message, please use an HTML compatible email viewer!"; // optional, comment out and test			
+				$mail->MsgHTML($body);
+						
+				if(!$mail->Send()) 
+				{
+						echo "Mailer Error: " . $mail->ErrorInfo;
+							
+				} else {
+							echo "Mail has been sent successfully.";
+				}				
+				
+				
+				
+				FC4MARBGCLTHS 
+
+
+FC13MARCLTHS
+
+
+$this->db->select('tableA.*', FALSE);
+$this->db->select('tableB.name, tableB.id AS new_name', FALSE);
+$this->db->from('tableA');
+$this->db->join('tableB', 'tableA.name = tableB.name');
+$query = $this->db->get();;
+$results = $query->result_array();
+
+$this->db->select('a.*', FALSE);
+$this->db->select('b.name, b.id AS new_name', FALSE);
+$this->db->from('tableA a');
+$this->db->join('tableB b', 'a.name = b.name');
+$query = $this->db->get();;
+$results = $query->result_array();
+
+http://beau.frusetta.com/2011/07/07/codeigniter-php-activerecord/
+
+ <div id="container">
+    	<div id="header">
+    		<div id="logo">
+    			<img src="http://pocketdynaq.com/USBCSD_Demo/images/logo.jpg" height="55" >    			
+    		</div>
+    		<div id="lang"><label> <?php echo anchor($this->lang->switch_uri('en'),'English');?> | <?php echo anchor($this->lang->switch_uri('zh-cn'),'Chinese');?> </label></div>
+    		
+    	</div>     
+  
+        <div id="main" role="main">
+            {content}
+        </div>
+  
+        <footer>
+  
+        </footer>
+    </div>
+
+	<table width="1000" border="1" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>US BCSD Marketplace Name<br><input type="text" name="searchbox" onblur="if (this.value == '') {this.value = 'Search Box';}" onfocus="if (this.value == 'Search Box') {this.value = '';}" value="Search Box" /></td>
+			<td>New Materials</td>
+			<td>&nbsp;</td>
+		</tr>
+		
+	</table>
+	
+select u.id, u.username,u.email from users u 
+inner join users_groups ug on u.id = ug.user_id
+where ug.group_id=3 AND u.id not in 
+(
+  SELECT material.created_by FROM material WHERE id = 10
+)
+
+SELECT `u`.`id`, `u`.`username`, `u`.`email` FROM (`users` u) INNER JOIN `users_groups` ug ON `u`.`id` = `ug`.`user_id` WHERE `ug`.`group_id` = '3' AND `u`.`id` NOT IN ('SELECT material.created_by FROM material WHERE id =10')
+
+
+http://labs.nticompassinc.com/CodeIgniter-Subqueries/
+
+
+echo "<script language=\"javascript\">";
+        echo "$(document).ready(function()
+             {
+               var elements = $('#materials');
+                $('#Container :text').each(function(){	
+          	  $('input[type=text]').each(elements,function() {
+          	  	 alert('I am in'); 
+          	  	 this.attr('disabled', 'disabled') });
+          	  });
+         </script>";
+		 
+		 $('#materials :text').each(function(){	
+          	      	 $(this).attr('disabled', 'disabled');          	  	  
+                  });
+                $('#materials option:selected').each(function(){	
+          	     	 $(this).attr('disabled', 'disabled');          	  	  
+                 });
+Dear Sir,
+I have been employed with this company since June 2012, as a Software design enginner. During this period, I have been completely sincere to my position in the company and performed my duties to the best of my abilities. 
+So, may I now request you to please consider an increment in my salary. As you are aware of my family circumstances, I hope you will take a favorable view and I feel confident that the management will be generous in recognizing and rewarding my merit.
+Looking forward to a favorable response from you,
+Thanks and regards.
+Yours Sincerely
+
+Dear Shyam
+Request to send me the details of the interview to my email id prashanthc14@rediffmail.com, which is schedduled at cochin. I am at present in Kerala.
+Thanks Prashanth.
+
+
+$(".owner_anlaysis").click(function(){
+		
+		if($(".owner_anlaysis").length == $(".owner_anlaysis:checked").length) {
+		$("#select_all_analysis").attr("checked", "checked");
+		} else {
+		$("#select_all_analysis").removeAttr("checked");
+		}
+
+	 });
+
+
+
+<!--	<td><input type="button" name="Delete" id="deleteRelationshipRow" value="Delete" onclick="deleteRow('family_symptoms')" /></td>-->
+
+
+
+/*	var relationsSymptomsCheck = 
+		{
+			init : function() {
+					//Add first row.
+					this.addRow();
+					//Attach event listeners to add and delete button
+					$("#addRelationshipRow").click(this.addEventHandler);
+				},
+			
+			addRow: function(){
+				$(".addRow").btnAddRow();
+				//alert('in this function to write the loggic');
+			},
+			
+			validate: function() {
+				//Iterate over each row.
+				var selectedRelation =	$(row).find("td:eq[1]>select").val();
+				var selectedSeverity = $(row).find("td:eq[2]>select").val();
+			},
+			
+			addEventHandler :function(event) {
+				alert("Added");
+			},
+			
+			deleteEventHandler: function(event) {
+				alert("Deleted");
+			}
+			
+		};*/
+
+    /*    function show_table() {
+        	var show = document.getElementById('family_option').value;
+        	if(show == 'Yes') {        		
+        		document.getElementById('show_table').style.display = "block";
+        	}
+        }*/
+    /*    function addRow(tableID) { 
+            var table = document.getElementById(tableID); 
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount); 
+            var colCount = table.rows[1].cells.length; 
+            for(var i=0; i<colCount; i++) { 
+                var newcell = row.insertCell(i);  
+                newcell.innerHTML = table.rows[1].cells[i].innerHTML;
+                //alert(newcell.childNodes);
+                switch(newcell.childNodes[0].type) {
+                    case "text":
+                            newcell.childNodes[0].value = "";
+                            break;
+                    case "checkbox":
+                            newcell.childNodes[0].checked = false;
+                            break;
+                    case "select-one":
+                            newcell.childNodes[0].selectedIndex = 0;
+                            break;
+                }
+            }
+        }
+ 
+        function deleteRow(tableID) {
+            try {
+            var table = document.getElementById(tableID);
+            var rowCount = table.rows.length;
+            alert(rowCount);
+            for(var i=0; i<rowCount; i++) {
+                var row = table.rows[i];
+                var chkbox = row.cells[0].childNodes[0];
+               // alert(chkbox);
+                if(null != chkbox && true == chkbox.checked) {
+                    if(rowCount <= 2) {
+                        alert("Cannot delete all the rows.");
+                        break;
+                    }
+                    table.deleteRow(i);
+                    rowCount--;
+                    i--;
+                }
+ 
+ 
+            }
+            }catch(e) {
+                alert(e);
+            }
+        }
+        function checkrelative() {
+        	var relatives = document.getElementById('relatives').value;
+        	alert(relatives);
+        }*/
+		
+		 onchange="checkrelative()"
