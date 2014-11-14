@@ -1,0 +1,35 @@
+chine - addMaterial, materials_lan,templates_lang, synergyUpdates
+eng - addMaterial, materials_lan,templates_lang, synergyUpdates
+
+
+model - company model, template_model, synergy model, 
+
+controllers - rstsrv/materials_
+
+views - transportation resources dialog
+
+js - template_controller
+
+cron - daily not, weekely matwi, resources wo action, recom, recom_ch, synergy wo action
+
+
+*/5    *    *    *   *  /usr/bin/php /var/www/synergy_stages_mail.php
+0  0  *  *  *  /usr/bin/php /var/www/daily_notification_cron.php
+0  15 * * 5 /usr/bin/php /var/www/weekly_notification_matwish.php
+10  15 * * 5 /usr/bin/php /var/www/weekly_marketplace_issues.php
+15  15 * * 5 /usr/bin/php /var/www/weekly_recom.php
+20  15 * * 5 /usr/bin/php /var/www/weekly_synergy_summary.php
+25 15 * * 5 /usr/bin/php /var/www/weekly_resources_without_action.php
+30 15 * * 5 /usr/bin/php /var/www/weekly_synergy_without_action.php
+
+
+
+$message = "<img src=".$img_url." height='100'><br>The details of new location added are: <br>";
+
+$message .="<br>";
+                    $site_url = base_url();
+                    $message .="Login to view at ".$site_url."<br>";
+                    $message .="Thank you for participating in the ".$marketplace_full_name." and helping ".$mp_name." become a Zero Waste community!";
+					
+					$con = mysqli_connect("127.0.0.1:33066","root","","bohai_updated");
+					gopika.krish@gmail.com 	!@#Gopika123 	smtp.gmail.com 	465 	ssl
